@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+    background-color: lightgray;
+}
+table{
+    margin: auto;
+    margin-top: 100px;
+    height: 300px;
+    width: 300px;
+}
+tbody{
+    border: 8px solid black;
+    padding: auto;
+    text-align: center;
+
+}
+.cube{
+    height: 10px;
+    width: 100px;
+    font-size: larger;
+    font-weight: 100px;
+    cursor: pointer;
+    
+
+}
+.hidden{
+    background-color:gray ;
+    border-top: 5px solid lightgray;
+    border-left: 5px solid lightgray;
+    border-bottom: 6px solid gray;
+    border-right: 6px solid gray;
+}
+.hidden span{
+opacity: 0;
+}
+.not{
+    background-color: red;
+}
