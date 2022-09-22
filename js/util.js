@@ -1,6 +1,4 @@
 
-// var mat = createMat(4)
-// console.log(mat);
 function createMat(size){
     var mat=[]
     for(var i = 0 ; i<size;i++){
@@ -11,10 +9,6 @@ function createMat(size){
     }
 return mat
 }
-
-
-// '💣'
-
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);

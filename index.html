@@ -9,15 +9,21 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body onload="onInitGame()" oncontextmenu="return false;">
+<body onload="onInitGame()" oncontextmenu="return false">
     <div class="container">
-        <button class="btn" onclick="onInitGame()">Easy</button>
-        <button class="btn" onclick="onInitGame(25)">Hard</button>
-        <button class="btn" onclick="onInitGame(36)">Extreme</button>
+        <button class="btn" onclick="onInitGame(gLevelE.SIZE)">Easy</button>
+        <button class="btn" onclick="onInitGame(gLevelM.SIZE)">Hard</button>
+        <button class="btn" onclick="onInitGame(gLevelH.SIZE)">Extreme</button>
+        <div class="restart">
+            <button class="new" onclick="onInitGame()">😃</button>
+        </div>
+        
     </div>
-    <div class="timer"></div>
+    <div class="timer">0</div>
     <table border = "1" cellpadding="50"></table>
     <tbody class="board"></tbody>
+    <div class="box1">Congrats!! You Won The Game</div>
+    <div class="box2">Sorry But You Lost!</div>
 <script src="js/util.js"></script>
 <script src="js/main.js"></script>
 </body>
