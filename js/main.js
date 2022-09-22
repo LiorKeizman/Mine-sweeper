@@ -137,7 +137,6 @@ function onCellClicked(elCell, i, j) {
     if (gBoard[i][j].isMarked) return
     if (gGame.secsPassed === 0)
         startTimer()
-    elCell.isShown = true
     revealCell(elCell, i, j)
     if (gBoard[i][j].isMine) {
         gameOver(gBoard, elCell)
@@ -198,7 +197,7 @@ function gameOver() {
 
 
 function checkGameOver() {
-    if (gGame.shownCount === numsCounter && gGame.markedCount === mineCounter) {
+    if (gGame.shownCount >= numsCounter && gGame.markedCount === mineCounter) {
         gGame.isOn = false
         clearInterval(gTimer)
         document.querySelector('.new').innerText = '😜'
@@ -230,7 +229,8 @@ function revealCell(elCell, i, j) {
         elCell.classList.remove('hidden')
         elCell.classList.add('not')
         content.style.opacity = 1
-    } else if (!gBoard[i][j].isShown) {
+    } else if (!elCell.isShown) {
+        elCell.isShown = true
         gGame.shownCount += 1
         if (gBoard[i][j].minesAroundCount === 0) {
             elCell.style.backgroundColor = 'white'
